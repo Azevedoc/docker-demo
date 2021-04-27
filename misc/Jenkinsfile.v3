@@ -18,6 +18,5 @@ node {
    }
    stage('Build image') {
         sh "docker build -t azevedoc/docker-nodejs-demo:${commit_id} -f Dockerfile ."
-      }
     }
 }
