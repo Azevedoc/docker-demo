@@ -19,6 +19,6 @@ node {
     stage('Run image') {
       sh "docker stop node-demo-test"
       sh "docker rm node-demo-test"
-      sh "docker run -p 3000:3000 -d --name node-demo-test azevedoc/docker-nodejs-demo"
+      sh "docker run -p 3000:3000 -d --name node-demo-test azevedoc/docker-nodejs-demo:${commit_id}"
     }
 }
